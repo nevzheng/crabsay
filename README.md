@@ -34,7 +34,7 @@ bash-3.2$ crabsay Hello World
 ## Getting Started
 1. Clone Repository
 ```bash
-git clone [GIT_URL]
+git clone https://github.com/nevzheng/crabsay.git
 ```
 2. Build Binary
 ```bash
@@ -71,4 +71,16 @@ bash-3.2$ fortune | ./target/release/crabsay
 ## References
 Inspired by https://github.com/mgattozzi/ferris-says
 
-I loved the concept and decided to try to write crabsay as a learning experience
+I loved the concept and decided to try to write crabsay as a learning experience.
+I noticed ferris-says' fsays binary does not accept arguments.
+my initial attempt at crabsay implements both input by arguments and piping from stdin
+I would like to see if clap can be used instead of using just std::env
+```bash
+bash-3.2$ ./fsays hello world
+error: Found argument 'hello' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    fsays [OPTIONS]
+
+For more information try --help
+```
